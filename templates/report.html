@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>MEDICULOUS - Patient Report</title>
+    <link rel="stylesheet" href="static/report.css">
+    <script type="text/javascript">
+      function printReport() {
+        var printButton = document.getElementById("print-button");
+        var goHomeButton = document.getElementById("go-home-button");
+        printButton.style.display = "none";
+        goHomeButton.style.display = "none";
+        window.print();
+        printButton.style.display = "block";
+        goHomeButton.style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>MEDICULOUS</h1>
+      <h2>Patient Report</h2>
+    </div>
+    <div class="content">
+      <ul>
+        {% for patient in patients %}
+        <li><strong>Username:</strong> {{ patient.username }}</li>
+        <li><strong>Name:</strong> {{ patient.name }}</li>
+        <li><strong>Admission Date:</strong> {{ patient.admission_date }}</li>
+        <li><strong>Discharge Date:</strong> {{ patient.discharge_date }}</li>
+        <li><strong>Diagnosis:</strong> {{ patient.diagnosis }}</li>
+        <li><strong>Treatment:</strong> {{ patient.treatment }}</li>
+        <li><strong>Doctor:</strong> {{ patient.doctor }}</li>
+        <li><strong>Ward:</strong> {{ patient.ward }}</li>
+        <li><strong>Room Number:</strong> {{ patient.room_number }}</li>
+        <li><strong>Billing Status:</strong> {{ patient.billing_status }}</li>
+        <li><strong>Outcome:</strong> {{ patient.outcome }}</li>
+        <li><strong>Comments:</strong> {{ patient.comments }}</li>
+        {% endfor %}
+      </ul>
+      <button id="print-button" onclick="printReport()">Print Report</button>
+      <button id="go-home-button" style="display:none;"><a href="{{url_for('home_tab')}}">Go Home</a></button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+.patient-add-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.patient-add-container h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.patient-add-container form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.patient-add-container input[type="text"],
+.patient-add-container input[type="date"],
+.patient-add-container textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.patient-add-container input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.patient-add-container input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.patient-add-container p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.patient-add-container a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.patient-add-container a:hover {
+  text-decoration: underline;
+}

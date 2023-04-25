@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Appointment Delete</title>
+    <link rel="stylesheet" href="static/appointment_search.css">
+  </head>
+  <body>
+    <h1>Appointment Delete</h1>
+    <div class="form-container">
+      <form method="POST" action="{{ url_for('appointment_delete') }}">
+        <label for="doctor">Doctor:</label>
+        <input type="text" id="doctor" name="doctor"><br><br>
+        <label for="appointment_date">Appointment Date:</label>
+        <input type="date" id="appointment_date" name="appointment_date"><br><br>
+        <label for="appointment_time">Appointment Time:</label>
+        <input type="time" id="appointment_time" name="appointment_time"><br><br>
+        <input type="submit" value="Delete Appointment">
+        {% if success_message %}
+    <div class="error">{{ success_message }}</div>
+    {% endif %}
+      </form>
+
+    </div>
+  <a href="{{url_for('home_tab')}}" class="btn">Back to Home</a>
+  </body>
+</html>

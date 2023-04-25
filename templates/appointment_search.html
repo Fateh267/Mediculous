@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Appointment Details</title>
+    <link rel="stylesheet" href="static/appointment_search.css">
+  </head>
+  <body>
+    <h1>Appointment Details</h1>
+    <div class="form-container">
+      <form method="POST" action="{{ url_for('appointment_search') }}">
+        <label for="doctor">Doctor:</label>
+        <input type="text" id="doctor" name="doctor"><br><br>
+        <label for="appointment_date">Appointment Date:</label>
+        <input type="date" id="appointment_date" name="appointment_date"><br><br>
+        <label for="appointment_time">Appointment Time:</label>
+        <input type="time" id="appointment_time" name="appointment_time"><br><br>
+        <input type="submit" value="Get Appointment Details">
+      </form>
+    </div>
+    {% if appointments %}
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Patient Name</th>
+              <th>Email</th>
+              <th>Appointment Date</th>
+              <th>Appointment Time</th>
+              <th>Doctor Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for appointment in appointments %}
+              <tr>
+                <td>{{ appointment.patient_name }}</td>
+                <td>{{ appointment.patient_email }}</td>
+                <td>{{ appointment.appointment_date }}</td>
+                <td>{{ appointment.appointment_time }}</td>
+                <td>{{ appointment.doctor }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Home</title>
+    <link rel="stylesheet" type="text/css" href="static/patient_option.css">
+</head>
+<body>
+    <h1>Welcome to Patient Home</h1>
+    <p>This is a patient management system where you can add and retrieve patient details.</p>
+    <div class="buttons-container">
+        <a href="{{url_for('patient_add')}}" class="add-button">Add Patient</a>
+        <a href="{{url_for('patient_search')}}" class="lookup-button">Retrieve Patient</a>
+    </div>
+    <a href="{{ url_for('home_tab')}}" class="back-button">Go Back</a>
+</body>
+</html>

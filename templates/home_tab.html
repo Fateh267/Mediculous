@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="static/home.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{url_for('home_tab')}}">Home</a></li>
+            <li><a href="{{url_for('patient_options')}}">Patients</a></li>
+            <li><a href="{{url_for('appointment_option')}}">Appointments</a></li>
+            <li><a href="{{url_for('inventory_options')}}">Inventory</a></li>
+            <li><a href="{{url_for('pdf_gen')}}">Reports</a></li>
+            <li><a href="{{url_for('quick_consult_search')}}">Quick Consult</a></li>
+            <li><a href="{{url_for('login')}}">Logout</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to the Hospital Management System. This system is designed to automate the manual processes of a hospital, including the management of patients' medical records, billing, appointments, and inventory management. Please use the navigation menu to access different sections of the system.</p>
+    </section>
+    <section id="patients">
+        <h2>Patients</h2>
+        <!-- Add patient information and functionalities here -->
+    </section>
+    <section id="appointments">
+        <h2>Appointments</h2>
+        <!-- Add appointment information and functionalities here -->
+    </section>
+    <section id="billing">
+        <h2>Billing</h2>
+        <!-- Add billing information and functionalities here -->
+    </section>
+    <section id="inventory">
+        <h2>Inventory</h2>
+        <!-- Add inventory information and functionalities here -->
+    </section>
+    <section id="reports">
+        <h2>Reports</h2>
+        <!-- Add reports and analytics information and functionalities here -->
+    </section>
+    <section id="logout">
+        <h2>Logout</h2>
+        <!-- Add logout functionality here -->
+    </section>
+</body>
+</html>

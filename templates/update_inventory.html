@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Update Inventory</title>
+    <link rel="stylesheet" href="static/inventory_action.css">
+  </head>
+  <body>
+    <h1>Update Inventory</h1>
+    <div class="form-container">
+      <form method="POST" action="{{ url_for('update_inventory') }}">
+        <label for="product_id">Product ID:</label>
+        <input type="text" id="product_id" name="product_id"><br><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity"><br><br>
+        <input type="submit" value="Update Quantity">
+      </form>
+      {% if success_message %}
+      <div class="success-message">
+        {{ success_message }}
+      </div>
+      {% endif %}
+      {% if error_message %}
+      <div class="error-message">
+        {{ error_message }}
+      </div>
+      {% endif %}
+    </div>
+    <div class="buttons-container">
+      <a href="{{ url_for('home_tab') }}"><button class="go-back-home-button">Go Back Home</button></a>
+    </div>
+  </body>
+</html>

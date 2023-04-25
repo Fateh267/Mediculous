@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="static/inventory_action.css">
+  </head>
+  <body>
+    <h1>Update Product Quantity</h1>
+    <div class="form-container">
+      <form method="POST" action="{{ url_for('delete_inventory') }}">
+        <label for="product_id">Product ID:</label>
+        <input type="text" id="product_id" name="product_id"><br><br>
+
+        <input type="submit" value="Delete">
+      </form>
+      {% if success_message %}
+      <div class="success-message">
+        {{ success_message }}
+      </div>
+      {% endif %}
+      {% if error_message %}
+      <div class="error-message">
+        {{ error_message }}
+      </div>
+      {% endif %}
+      <div class="buttons-container">
+        <a href="{{ url_for ('home_tab')}}"><button class="go-back-home-button">Go Back Home</button></a>
+      </div>
+    </div>
+  </body>
+</html>

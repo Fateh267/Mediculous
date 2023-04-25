@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Appointments</title>
+    <link rel="stylesheet" href="static/appointment_option.css">
+  </head>
+  <body>
+    <div class="buttons-container">
+      <a href="{{ url_for ('add_appointment')}}"><button class="add-appointment-button">Add Appointment</button></a>
+      <a href="{{ url_for ('appointment_search')}}"><button class="check-appointment-button">Check Appointment</button></a>
+      <a href="{{ url_for ('appointment_delete')}}"><button class="delete-appointment-button">Delete Appointment</button></a>
+      <a href="{{ url_for ('home_tab')}}"><button class="go-back-home-button">Go Back Home</button></a>
+    </div>
+  </body>
+</html>

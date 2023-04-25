@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Generator</title>
+    <link rel="stylesheet" href="static/pdf_gen.css">
+</head>
+<body>
+    <h1>Report Generator</h1>
+    <form action="{{ url_for('pdf_gen') }}" method="POST">
+        <label for="username">Username/Email:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="admisson_date">Admision Date:</label>
+        <input type="date" id="admisson_date" name="admission_date">
+        <br>
+        <input type="submit" value="Generate Report">
+    </form>
+<a href="{{ url_for('home_tab')}}" class="back-button">Go Back</a>
+</body>
+</html>

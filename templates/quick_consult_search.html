@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Keyword Search</title>
+    <link rel="stylesheet" href="static/consult.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Keyword Search</h1>
+      <form method="POST">
+        <label for="search_string">Enter your keyword:</label>
+        <input type="text" id="search_string" name="search_string" required>
+        <button type="submit">Search</button>
+      </form>
+
+      {% if matches %}
+        <h2>Search Results for "{{ search_string }}"</h2>
+        <ul>
+          {% for match in matches %}
+            <li>{{ match }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  <p><a href="{{url_for('home_tab')}}">Back to Home</a></p>
+  </body>
+
+</html>

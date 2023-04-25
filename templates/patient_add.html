@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Patient</title>
+    <link rel="stylesheet" type="text/css" href="/static/patient_add.css">
+</head>
+<body>
+    <div class="patient-add-container">
+        <h1>Add Patient</h1>
+        <form method="post" action="{{url_for('patient_add')}}">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="admission_date">Admission Date:</label>
+                <input type="date" id="admission_date" name="admission_date" placeholder="Admission Date" required>
+            </div>
+            <div class="form-group">
+                <label for="discharge_date">Discharge Date:</label>
+                <input type="date" id="discharge_date" name="discharge_date" placeholder="Discharge Date" required>
+            </div>
+            <div class="form-group">
+                <label for="diagnosis">Diagnosis:</label>
+                <input type="text" id="diagnosis" name="diagnosis" placeholder="Diagnosis" required>
+            </div>
+            <div class="form-group">
+                <label for="treatment">Treatment:</label>
+                <input type="text" id="treatment" name="treatment" placeholder="Treatment" required>
+            </div>
+            <div class="form-group">
+                <label for="doctor">Doctor:</label>
+                <input type="text" id="doctor" name="doctor" placeholder="Doctor" required>
+            </div>
+            <div class="form-group">
+                <label for="ward">Ward:</label>
+                <input type="text" id="ward" name="ward" placeholder="Ward" required>
+            </div>
+            <div class="form-group">
+                <label for="room_number">Room Number:</label>
+                <input type="text" id="room_number" name="room_number" placeholder="Room Number" required>
+            </div>
+            <div class="form-group">
+                <label for="billing_status">Billing Status:</label>
+                <input type="text" id="billing_status" name="billing_status" placeholder="Billing Status" required>
+            </div>
+            <div class="form-group">
+                <label for="outcome">Outcome:</label>
+                <input type="text" id="outcome" name="outcome" placeholder="Outcome" required>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Comments"></textarea>
+            </div>
+            <input type="submit" value="Add Patient">
+        </form>
+        <p class="back-link"><a href="{{url_for('home_tab')}}">Back to Home</a></p>
+    </div>
+</body>
+</html>

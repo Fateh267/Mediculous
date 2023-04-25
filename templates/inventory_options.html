@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Inventorys</title>
+    <link rel="stylesheet" href="static/Inventory_option.css">
+  </head>
+  <body>
+    <div class="buttons-container">
+      <a href="{{ url_for ('add_inventory')}}"><button class="add-inventory-button">Add Inventory</button></a>
+        <a href="{{ url_for ('update_inventory')}}"><button class="update-Inventory-button">Update Inventory</button></a>
+      <a href="{{ url_for ('inventory_search')}}"><button class="check-inventory-button">Check Inventory</button></a>
+      <a href="{{ url_for ('delete_inventory')}}"><button class="delete-inventory-button">Delete Inventory</button></a>
+      <a href="{{ url_for ('home_tab')}}"><button class="go-back-home-button">Go Back Home</button></a>
+    </div>
+  </body>
+</html>

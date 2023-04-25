@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Lookup</title>
+    <link rel="stylesheet" type="text/css" href="static/patient_search.css">
+    <link rel="stylesheet" type="text/css" href="static/lookup.css">
+</head>
+<body>
+    <h1>Patient Lookup</h1>
+    <form method="post" action="{{url_for('patient_search')}}">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Lookup Patient</button>
+    </form>
+    <h1>Patient Lookup Result</h1>
+    <div>
+        {% if error_message %}
+            <p>{{ error_message }}</p>
+            <a href="{{ url_for('home_tab') }}" class="back-button">Go Back</a>
+        {% else %}
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Admission Date</th>
+                    <th>Discharge Date</th>
+                    <th>Diagnosis</th>
+                    <th>Treatment</th>
+                    <th>Doctor</th>
+                    <th>Ward</th>
+                    <th>Room Number</th>
+                    <th>Billing Status</th>
+                    <th>Outcome</th>
+                    <th>Comments</th>
+                </tr>
+                {% for patient in patients %}
+                    <tr>
+                        <td>{{ patient.username }}</td>
+                        <td>{{ patient.name }}</td>
+                        <td>{{ patient.admission_date }}</td>
+                        <td>{{ patient.discharge_date }}</td>
+                        <td>{{ patient.diagnosis }}</td>
+                        <td>{{ patient.treatment }}</td>
+                        <td>{{ patient.doctor }}</td>
+                        <td>{{ patient.ward }}</td>
+                        <td>{{ patient.room_number }}</td>
+                        <td>{{ patient.billing_status }}</td>
+                        <td>{{ patient.outcome }}</td>
+                        <td>{{ patient.comments }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <a href="{{ url_for('patient_search')}}" class="back-button">Go Back</a>
+        {% endif %}
+        <p><a href="{{url_for('home_tab')}}">Back to Home</a></p>
+    </div>
+</body>
+</html>

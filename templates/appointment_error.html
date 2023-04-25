@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Add Appointment</title>
+    <link rel="stylesheet" href="static/appointment_error.css">
+  </head>
+  <body>
+    <h1>Appointment Error</h1>
+    {% if error_message %}
+    <div class="error">{{ error_message }}</div>
+    {% endif %}
+    <p class="back-link"><a href="{{url_for('add_appointment')}}">Back to Adding Appointment</a></p>
+      <p class="back-link"><a href="{{url_for('home_tab')}}">Back to Home</a></p>
+    </form>
+  </body>
+</html>

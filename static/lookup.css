@@ -1,0 +1,56 @@
+/* patient_search_result.css */
+
+/* Reset default padding and margin for the page */
+body, h1, table {
+    margin: 0;
+    align:center;
+    padding: 0;
+}
+
+/* Set background color and font for the page */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Center align the page content */
+h1, div {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    align: center;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Style the "Go Back" button */
+.back-button {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

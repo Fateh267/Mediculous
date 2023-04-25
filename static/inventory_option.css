@@ -1,0 +1,52 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.add-inventory-button,
+.update-Inventory-button,
+.check-inventory-button,
+.delete-inventory-button,
+.go-back-home-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.add-inventory-button:hover,
+.update-Inventory-button:hover,
+.check-inventory-button:hover,
+.delete-inventory-button:hover,
+.go-back-home-button:hover {
+  background-color: #3e8e41;
+}
+
+.add-inventory-button:active,
+.update-Inventory-button:active,
+.check-inventory-button:active,
+.delete-inventory-button:active,
+.go-back-home-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+@media screen and (max-width: 600px) {
+  .buttons-container {
+    flex-direction: column;
+  }
+}

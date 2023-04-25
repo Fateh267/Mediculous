@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Lookup</title>
+    <link rel="stylesheet" type="text/css" href="static/patient_search.css">
+    <link rel="stylesheet" type="text/css" href="static/lookup.css">
+</head>
+<body>
+    <h1>Product Lookup Lookup</h1>
+    <form method="post" action="{{url_for('inventory_search')}}">
+        <label for="product_name">Product Name:</label>
+        <input type="text" id="product_name" name="product_name" required>
+        <button type="submit">Lookup Product</button>
+    </form>
+    <h1>Product Lookup Result</h1>
+    <div>
+        {% if error_message %}
+            <p>{{ error_message }}</p>
+            <a href="{{ url_for('home_tab') }}" class="back-button">Go Back</a>
+        {% else %}
+            <table>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Manufacturer</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+
+                </tr>
+                {% for product in inventory %}
+                    <tr>
+                        <td>{{ product.product_id }}</td>
+                        <td>{{ product.product_name }}</td>
+                        <td>{{ product.manufacturer }}</td>
+                        <td>{{ product.quantity }}</td>
+                        <td>{{ product.price }}</td>
+
+                    </tr>
+                {% endfor %}
+            </table>
+            <a href="{{ url_for('inventory_search')}}" class="back-button">Go Back</a>
+        {% endif %}
+        <p><a href="{{url_for('home_tab')}}">Back to Home</a></p>
+    </div>
+</body>
+</html>
